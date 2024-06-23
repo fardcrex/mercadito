@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mi_mercadito_app/app/stores/store_presentation_model.dart';
 import 'package:mi_mercadito_app/app/stores/widget/store_card.dart';
-import 'package:mi_mercadito_app/app/stores/store_detail.dart';
+import 'package:mi_mercadito_app/app/stores/store_detail_page.dart';
 
 class DataMarketsView extends StatelessWidget {
   const DataMarketsView({super.key});
