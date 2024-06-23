@@ -20,18 +20,21 @@ mixin _$CouponsListEvent {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() refresh,
+    required TResult Function(CouponDto coupon) addCoupon,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? refresh,
+    TResult? Function(CouponDto coupon)? addCoupon,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? refresh,
+    TResult Function(CouponDto coupon)? addCoupon,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -39,18 +42,21 @@ mixin _$CouponsListEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(_Refresh value) refresh,
+    required TResult Function(_AddCoupon value) addCoupon,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
     TResult? Function(_Refresh value)? refresh,
+    TResult? Function(_AddCoupon value)? addCoupon,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_Refresh value)? refresh,
+    TResult Function(_AddCoupon value)? addCoupon,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -114,6 +120,7 @@ class _$StartedImpl implements _Started {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() refresh,
+    required TResult Function(CouponDto coupon) addCoupon,
   }) {
     return started();
   }
@@ -123,6 +130,7 @@ class _$StartedImpl implements _Started {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? refresh,
+    TResult? Function(CouponDto coupon)? addCoupon,
   }) {
     return started?.call();
   }
@@ -132,6 +140,7 @@ class _$StartedImpl implements _Started {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? refresh,
+    TResult Function(CouponDto coupon)? addCoupon,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -145,6 +154,7 @@ class _$StartedImpl implements _Started {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(_Refresh value) refresh,
+    required TResult Function(_AddCoupon value) addCoupon,
   }) {
     return started(this);
   }
@@ -154,6 +164,7 @@ class _$StartedImpl implements _Started {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
     TResult? Function(_Refresh value)? refresh,
+    TResult? Function(_AddCoupon value)? addCoupon,
   }) {
     return started?.call(this);
   }
@@ -163,6 +174,7 @@ class _$StartedImpl implements _Started {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_Refresh value)? refresh,
+    TResult Function(_AddCoupon value)? addCoupon,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -216,6 +228,7 @@ class _$RefreshImpl implements _Refresh {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() refresh,
+    required TResult Function(CouponDto coupon) addCoupon,
   }) {
     return refresh();
   }
@@ -225,6 +238,7 @@ class _$RefreshImpl implements _Refresh {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? refresh,
+    TResult? Function(CouponDto coupon)? addCoupon,
   }) {
     return refresh?.call();
   }
@@ -234,6 +248,7 @@ class _$RefreshImpl implements _Refresh {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? refresh,
+    TResult Function(CouponDto coupon)? addCoupon,
     required TResult orElse(),
   }) {
     if (refresh != null) {
@@ -247,6 +262,7 @@ class _$RefreshImpl implements _Refresh {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(_Refresh value) refresh,
+    required TResult Function(_AddCoupon value) addCoupon,
   }) {
     return refresh(this);
   }
@@ -256,6 +272,7 @@ class _$RefreshImpl implements _Refresh {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
     TResult? Function(_Refresh value)? refresh,
+    TResult? Function(_AddCoupon value)? addCoupon,
   }) {
     return refresh?.call(this);
   }
@@ -265,6 +282,7 @@ class _$RefreshImpl implements _Refresh {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_Refresh value)? refresh,
+    TResult Function(_AddCoupon value)? addCoupon,
     required TResult orElse(),
   }) {
     if (refresh != null) {
@@ -276,6 +294,155 @@ class _$RefreshImpl implements _Refresh {
 
 abstract class _Refresh implements CouponsListEvent {
   const factory _Refresh() = _$RefreshImpl;
+}
+
+/// @nodoc
+abstract class _$$AddCouponImplCopyWith<$Res> {
+  factory _$$AddCouponImplCopyWith(
+          _$AddCouponImpl value, $Res Function(_$AddCouponImpl) then) =
+      __$$AddCouponImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({CouponDto coupon});
+
+  $CouponDtoCopyWith<$Res> get coupon;
+}
+
+/// @nodoc
+class __$$AddCouponImplCopyWithImpl<$Res>
+    extends _$CouponsListEventCopyWithImpl<$Res, _$AddCouponImpl>
+    implements _$$AddCouponImplCopyWith<$Res> {
+  __$$AddCouponImplCopyWithImpl(
+      _$AddCouponImpl _value, $Res Function(_$AddCouponImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? coupon = null,
+  }) {
+    return _then(_$AddCouponImpl(
+      null == coupon
+          ? _value.coupon
+          : coupon // ignore: cast_nullable_to_non_nullable
+              as CouponDto,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CouponDtoCopyWith<$Res> get coupon {
+    return $CouponDtoCopyWith<$Res>(_value.coupon, (value) {
+      return _then(_value.copyWith(coupon: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$AddCouponImpl implements _AddCoupon {
+  const _$AddCouponImpl(this.coupon);
+
+  @override
+  final CouponDto coupon;
+
+  @override
+  String toString() {
+    return 'CouponsListEvent.addCoupon(coupon: $coupon)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AddCouponImpl &&
+            (identical(other.coupon, coupon) || other.coupon == coupon));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, coupon);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AddCouponImplCopyWith<_$AddCouponImpl> get copyWith =>
+      __$$AddCouponImplCopyWithImpl<_$AddCouponImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() refresh,
+    required TResult Function(CouponDto coupon) addCoupon,
+  }) {
+    return addCoupon(coupon);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? refresh,
+    TResult? Function(CouponDto coupon)? addCoupon,
+  }) {
+    return addCoupon?.call(coupon);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? refresh,
+    TResult Function(CouponDto coupon)? addCoupon,
+    required TResult orElse(),
+  }) {
+    if (addCoupon != null) {
+      return addCoupon(coupon);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_Refresh value) refresh,
+    required TResult Function(_AddCoupon value) addCoupon,
+  }) {
+    return addCoupon(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_Refresh value)? refresh,
+    TResult? Function(_AddCoupon value)? addCoupon,
+  }) {
+    return addCoupon?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_Refresh value)? refresh,
+    TResult Function(_AddCoupon value)? addCoupon,
+    required TResult orElse(),
+  }) {
+    if (addCoupon != null) {
+      return addCoupon(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _AddCoupon implements CouponsListEvent {
+  const factory _AddCoupon(final CouponDto coupon) = _$AddCouponImpl;
+
+  CouponDto get coupon;
+  @JsonKey(ignore: true)
+  _$$AddCouponImplCopyWith<_$AddCouponImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc

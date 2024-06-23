@@ -29,17 +29,22 @@ _$ReviewCreateDtoImpl _$$ReviewCreateDtoImplFromJson(
         Map<String, dynamic> json) =>
     _$ReviewCreateDtoImpl(
       comments: json['comments'] as String,
-      productQualityStars: (json['productQualityStars'] as num).toDouble(),
-      customerAttentionStars:
-          (json['customerAttentionStars'] as num).toDouble(),
-      waitingTimeStars: (json['waitingTimeStars'] as num).toDouble(),
-      averageStars: (json['averageStars'] as num).toDouble(),
+      fullName: json['fullName'] as String,
+      storeId: (json['storeId'] as num).toInt(),
+      userId: (json['userId'] as num).toInt(),
+      productQualityStars: (json['productQualityStars'] as num).toInt(),
+      customerAttentionStars: (json['customerAttentionStars'] as num).toInt(),
+      waitingTimeStars: (json['waitingTimeStars'] as num).toInt(),
+      averageStars: (json['averageStars'] as num).toInt(),
     );
 
 Map<String, dynamic> _$$ReviewCreateDtoImplToJson(
         _$ReviewCreateDtoImpl instance) =>
     <String, dynamic>{
       'comments': instance.comments,
+      'fullName': instance.fullName,
+      'storeId': instance.storeId,
+      'userId': instance.userId,
       'productQualityStars': instance.productQualityStars,
       'customerAttentionStars': instance.customerAttentionStars,
       'waitingTimeStars': instance.waitingTimeStars,

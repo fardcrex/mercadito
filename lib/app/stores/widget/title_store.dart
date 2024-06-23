@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mi_mercadito_app/app/widget/store_painter.dart';
 import 'package:mi_mercadito_app/core/theme/extensions/theme_of.dart';
+import 'package:rate_in_stars/rate_in_stars.dart';
 
 class TitleStore extends StatelessWidget {
   const TitleStore({
@@ -74,42 +75,20 @@ class ReviewText extends StatelessWidget {
 }
 
 class StartsRow extends StatelessWidget {
-  const StartsRow({super.key});
+  final double rating;
+  const StartsRow({super.key, required this.rating});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       alignment: Alignment.centerLeft,
       padding: EdgeInsets.symmetric(horizontal: (16), vertical: 0),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          Icon(
-            Icons.star,
-            color: themeOf(context).secondaryColor,
-            size: 48,
-          ),
-          Icon(
-            Icons.star,
-            color: themeOf(context).secondaryColor,
-            size: 48,
-          ),
-          Icon(
-            Icons.star,
-            color: themeOf(context).secondaryColor,
-            size: 48,
-          ),
-          Icon(
-            Icons.star,
-            color: themeOf(context).secondaryColor,
-            size: 48,
-          ),
-          Icon(
-            Icons.star,
-            color: themeOf(context).buttonDisabled,
-            size: 48,
-          ),
-        ],
+      child: RatingStars(
+        key: ValueKey(rating),
+        editable: false,
+        rating: rating,
+        color: Colors.amber,
+        iconSize: 32,
       ),
     );
   }

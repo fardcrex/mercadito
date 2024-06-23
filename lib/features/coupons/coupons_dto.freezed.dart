@@ -21,10 +21,10 @@ CouponDto _$CouponDtoFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$CouponDto {
   String get id => throw _privateConstructorUsedError;
-  String get code => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
+  String get description => throw _privateConstructorUsedError;
   double get discount => throw _privateConstructorUsedError;
-  String get urlQr => throw _privateConstructorUsedError;
+  String get media => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -38,7 +38,11 @@ abstract class $CouponDtoCopyWith<$Res> {
       _$CouponDtoCopyWithImpl<$Res, CouponDto>;
   @useResult
   $Res call(
-      {String id, String code, String name, double discount, String urlQr});
+      {String id,
+      String name,
+      String description,
+      double discount,
+      String media});
 }
 
 /// @nodoc
@@ -55,31 +59,31 @@ class _$CouponDtoCopyWithImpl<$Res, $Val extends CouponDto>
   @override
   $Res call({
     Object? id = null,
-    Object? code = null,
     Object? name = null,
+    Object? description = null,
     Object? discount = null,
-    Object? urlQr = null,
+    Object? media = null,
   }) {
     return _then(_value.copyWith(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      code: null == code
-          ? _value.code
-          : code // ignore: cast_nullable_to_non_nullable
-              as String,
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      description: null == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
               as String,
       discount: null == discount
           ? _value.discount
           : discount // ignore: cast_nullable_to_non_nullable
               as double,
-      urlQr: null == urlQr
-          ? _value.urlQr
-          : urlQr // ignore: cast_nullable_to_non_nullable
+      media: null == media
+          ? _value.media
+          : media // ignore: cast_nullable_to_non_nullable
               as String,
     ) as $Val);
   }
@@ -94,7 +98,11 @@ abstract class _$$CouponDtoImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String id, String code, String name, double discount, String urlQr});
+      {String id,
+      String name,
+      String description,
+      double discount,
+      String media});
 }
 
 /// @nodoc
@@ -109,31 +117,31 @@ class __$$CouponDtoImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? id = null,
-    Object? code = null,
     Object? name = null,
+    Object? description = null,
     Object? discount = null,
-    Object? urlQr = null,
+    Object? media = null,
   }) {
     return _then(_$CouponDtoImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      code: null == code
-          ? _value.code
-          : code // ignore: cast_nullable_to_non_nullable
-              as String,
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      description: null == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
               as String,
       discount: null == discount
           ? _value.discount
           : discount // ignore: cast_nullable_to_non_nullable
               as double,
-      urlQr: null == urlQr
-          ? _value.urlQr
-          : urlQr // ignore: cast_nullable_to_non_nullable
+      media: null == media
+          ? _value.media
+          : media // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -143,29 +151,31 @@ class __$$CouponDtoImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$CouponDtoImpl implements _CouponDto {
   const _$CouponDtoImpl(
-      {required this.id,
-      required this.code,
+      {this.id = '',
       required this.name,
-      required this.discount,
-      required this.urlQr});
+      required this.description,
+      this.discount = 0.25,
+      required this.media});
 
   factory _$CouponDtoImpl.fromJson(Map<String, dynamic> json) =>
       _$$CouponDtoImplFromJson(json);
 
   @override
+  @JsonKey()
   final String id;
-  @override
-  final String code;
   @override
   final String name;
   @override
+  final String description;
+  @override
+  @JsonKey()
   final double discount;
   @override
-  final String urlQr;
+  final String media;
 
   @override
   String toString() {
-    return 'CouponDto(id: $id, code: $code, name: $name, discount: $discount, urlQr: $urlQr)';
+    return 'CouponDto(id: $id, name: $name, description: $description, discount: $discount, media: $media)';
   }
 
   @override
@@ -174,16 +184,18 @@ class _$CouponDtoImpl implements _CouponDto {
         (other.runtimeType == runtimeType &&
             other is _$CouponDtoImpl &&
             (identical(other.id, id) || other.id == id) &&
-            (identical(other.code, code) || other.code == code) &&
             (identical(other.name, name) || other.name == name) &&
+            (identical(other.description, description) ||
+                other.description == description) &&
             (identical(other.discount, discount) ||
                 other.discount == discount) &&
-            (identical(other.urlQr, urlQr) || other.urlQr == urlQr));
+            (identical(other.media, media) || other.media == media));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, id, code, name, discount, urlQr);
+  int get hashCode =>
+      Object.hash(runtimeType, id, name, description, discount, media);
 
   @JsonKey(ignore: true)
   @override
@@ -201,11 +213,11 @@ class _$CouponDtoImpl implements _CouponDto {
 
 abstract class _CouponDto implements CouponDto {
   const factory _CouponDto(
-      {required final String id,
-      required final String code,
+      {final String id,
       required final String name,
-      required final double discount,
-      required final String urlQr}) = _$CouponDtoImpl;
+      required final String description,
+      final double discount,
+      required final String media}) = _$CouponDtoImpl;
 
   factory _CouponDto.fromJson(Map<String, dynamic> json) =
       _$CouponDtoImpl.fromJson;
@@ -213,13 +225,13 @@ abstract class _CouponDto implements CouponDto {
   @override
   String get id;
   @override
-  String get code;
-  @override
   String get name;
+  @override
+  String get description;
   @override
   double get discount;
   @override
-  String get urlQr;
+  String get media;
   @override
   @JsonKey(ignore: true)
   _$$CouponDtoImplCopyWith<_$CouponDtoImpl> get copyWith =>

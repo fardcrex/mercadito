@@ -244,10 +244,13 @@ ReviewCreateDto _$ReviewCreateDtoFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$ReviewCreateDto {
   String get comments => throw _privateConstructorUsedError;
-  double get productQualityStars => throw _privateConstructorUsedError;
-  double get customerAttentionStars => throw _privateConstructorUsedError;
-  double get waitingTimeStars => throw _privateConstructorUsedError;
-  double get averageStars => throw _privateConstructorUsedError;
+  String get fullName => throw _privateConstructorUsedError;
+  int get storeId => throw _privateConstructorUsedError;
+  int get userId => throw _privateConstructorUsedError;
+  int get productQualityStars => throw _privateConstructorUsedError;
+  int get customerAttentionStars => throw _privateConstructorUsedError;
+  int get waitingTimeStars => throw _privateConstructorUsedError;
+  int get averageStars => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -263,10 +266,13 @@ abstract class $ReviewCreateDtoCopyWith<$Res> {
   @useResult
   $Res call(
       {String comments,
-      double productQualityStars,
-      double customerAttentionStars,
-      double waitingTimeStars,
-      double averageStars});
+      String fullName,
+      int storeId,
+      int userId,
+      int productQualityStars,
+      int customerAttentionStars,
+      int waitingTimeStars,
+      int averageStars});
 }
 
 /// @nodoc
@@ -283,6 +289,9 @@ class _$ReviewCreateDtoCopyWithImpl<$Res, $Val extends ReviewCreateDto>
   @override
   $Res call({
     Object? comments = null,
+    Object? fullName = null,
+    Object? storeId = null,
+    Object? userId = null,
     Object? productQualityStars = null,
     Object? customerAttentionStars = null,
     Object? waitingTimeStars = null,
@@ -293,22 +302,34 @@ class _$ReviewCreateDtoCopyWithImpl<$Res, $Val extends ReviewCreateDto>
           ? _value.comments
           : comments // ignore: cast_nullable_to_non_nullable
               as String,
+      fullName: null == fullName
+          ? _value.fullName
+          : fullName // ignore: cast_nullable_to_non_nullable
+              as String,
+      storeId: null == storeId
+          ? _value.storeId
+          : storeId // ignore: cast_nullable_to_non_nullable
+              as int,
+      userId: null == userId
+          ? _value.userId
+          : userId // ignore: cast_nullable_to_non_nullable
+              as int,
       productQualityStars: null == productQualityStars
           ? _value.productQualityStars
           : productQualityStars // ignore: cast_nullable_to_non_nullable
-              as double,
+              as int,
       customerAttentionStars: null == customerAttentionStars
           ? _value.customerAttentionStars
           : customerAttentionStars // ignore: cast_nullable_to_non_nullable
-              as double,
+              as int,
       waitingTimeStars: null == waitingTimeStars
           ? _value.waitingTimeStars
           : waitingTimeStars // ignore: cast_nullable_to_non_nullable
-              as double,
+              as int,
       averageStars: null == averageStars
           ? _value.averageStars
           : averageStars // ignore: cast_nullable_to_non_nullable
-              as double,
+              as int,
     ) as $Val);
   }
 }
@@ -323,10 +344,13 @@ abstract class _$$ReviewCreateDtoImplCopyWith<$Res>
   @useResult
   $Res call(
       {String comments,
-      double productQualityStars,
-      double customerAttentionStars,
-      double waitingTimeStars,
-      double averageStars});
+      String fullName,
+      int storeId,
+      int userId,
+      int productQualityStars,
+      int customerAttentionStars,
+      int waitingTimeStars,
+      int averageStars});
 }
 
 /// @nodoc
@@ -341,6 +365,9 @@ class __$$ReviewCreateDtoImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? comments = null,
+    Object? fullName = null,
+    Object? storeId = null,
+    Object? userId = null,
     Object? productQualityStars = null,
     Object? customerAttentionStars = null,
     Object? waitingTimeStars = null,
@@ -351,22 +378,34 @@ class __$$ReviewCreateDtoImplCopyWithImpl<$Res>
           ? _value.comments
           : comments // ignore: cast_nullable_to_non_nullable
               as String,
+      fullName: null == fullName
+          ? _value.fullName
+          : fullName // ignore: cast_nullable_to_non_nullable
+              as String,
+      storeId: null == storeId
+          ? _value.storeId
+          : storeId // ignore: cast_nullable_to_non_nullable
+              as int,
+      userId: null == userId
+          ? _value.userId
+          : userId // ignore: cast_nullable_to_non_nullable
+              as int,
       productQualityStars: null == productQualityStars
           ? _value.productQualityStars
           : productQualityStars // ignore: cast_nullable_to_non_nullable
-              as double,
+              as int,
       customerAttentionStars: null == customerAttentionStars
           ? _value.customerAttentionStars
           : customerAttentionStars // ignore: cast_nullable_to_non_nullable
-              as double,
+              as int,
       waitingTimeStars: null == waitingTimeStars
           ? _value.waitingTimeStars
           : waitingTimeStars // ignore: cast_nullable_to_non_nullable
-              as double,
+              as int,
       averageStars: null == averageStars
           ? _value.averageStars
           : averageStars // ignore: cast_nullable_to_non_nullable
-              as double,
+              as int,
     ));
   }
 }
@@ -376,6 +415,9 @@ class __$$ReviewCreateDtoImplCopyWithImpl<$Res>
 class _$ReviewCreateDtoImpl implements _ReviewCreateDto {
   const _$ReviewCreateDtoImpl(
       {required this.comments,
+      required this.fullName,
+      required this.storeId,
+      required this.userId,
       required this.productQualityStars,
       required this.customerAttentionStars,
       required this.waitingTimeStars,
@@ -387,17 +429,23 @@ class _$ReviewCreateDtoImpl implements _ReviewCreateDto {
   @override
   final String comments;
   @override
-  final double productQualityStars;
+  final String fullName;
   @override
-  final double customerAttentionStars;
+  final int storeId;
   @override
-  final double waitingTimeStars;
+  final int userId;
   @override
-  final double averageStars;
+  final int productQualityStars;
+  @override
+  final int customerAttentionStars;
+  @override
+  final int waitingTimeStars;
+  @override
+  final int averageStars;
 
   @override
   String toString() {
-    return 'ReviewCreateDto(comments: $comments, productQualityStars: $productQualityStars, customerAttentionStars: $customerAttentionStars, waitingTimeStars: $waitingTimeStars, averageStars: $averageStars)';
+    return 'ReviewCreateDto(comments: $comments, fullName: $fullName, storeId: $storeId, userId: $userId, productQualityStars: $productQualityStars, customerAttentionStars: $customerAttentionStars, waitingTimeStars: $waitingTimeStars, averageStars: $averageStars)';
   }
 
   @override
@@ -407,6 +455,10 @@ class _$ReviewCreateDtoImpl implements _ReviewCreateDto {
             other is _$ReviewCreateDtoImpl &&
             (identical(other.comments, comments) ||
                 other.comments == comments) &&
+            (identical(other.fullName, fullName) ||
+                other.fullName == fullName) &&
+            (identical(other.storeId, storeId) || other.storeId == storeId) &&
+            (identical(other.userId, userId) || other.userId == userId) &&
             (identical(other.productQualityStars, productQualityStars) ||
                 other.productQualityStars == productQualityStars) &&
             (identical(other.customerAttentionStars, customerAttentionStars) ||
@@ -419,8 +471,16 @@ class _$ReviewCreateDtoImpl implements _ReviewCreateDto {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, comments, productQualityStars,
-      customerAttentionStars, waitingTimeStars, averageStars);
+  int get hashCode => Object.hash(
+      runtimeType,
+      comments,
+      fullName,
+      storeId,
+      userId,
+      productQualityStars,
+      customerAttentionStars,
+      waitingTimeStars,
+      averageStars);
 
   @JsonKey(ignore: true)
   @override
@@ -440,10 +500,13 @@ class _$ReviewCreateDtoImpl implements _ReviewCreateDto {
 abstract class _ReviewCreateDto implements ReviewCreateDto {
   const factory _ReviewCreateDto(
       {required final String comments,
-      required final double productQualityStars,
-      required final double customerAttentionStars,
-      required final double waitingTimeStars,
-      required final double averageStars}) = _$ReviewCreateDtoImpl;
+      required final String fullName,
+      required final int storeId,
+      required final int userId,
+      required final int productQualityStars,
+      required final int customerAttentionStars,
+      required final int waitingTimeStars,
+      required final int averageStars}) = _$ReviewCreateDtoImpl;
 
   factory _ReviewCreateDto.fromJson(Map<String, dynamic> json) =
       _$ReviewCreateDtoImpl.fromJson;
@@ -451,13 +514,19 @@ abstract class _ReviewCreateDto implements ReviewCreateDto {
   @override
   String get comments;
   @override
-  double get productQualityStars;
+  String get fullName;
   @override
-  double get customerAttentionStars;
+  int get storeId;
   @override
-  double get waitingTimeStars;
+  int get userId;
   @override
-  double get averageStars;
+  int get productQualityStars;
+  @override
+  int get customerAttentionStars;
+  @override
+  int get waitingTimeStars;
+  @override
+  int get averageStars;
   @override
   @JsonKey(ignore: true)
   _$$ReviewCreateDtoImplCopyWith<_$ReviewCreateDtoImpl> get copyWith =>

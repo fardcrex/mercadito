@@ -16,36 +16,45 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$StoreDetailEvent {
-  String get id => throw _privateConstructorUsedError;
+  String get idStore => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String id) started,
+    required TResult Function(String idStore) started,
+    required TResult Function(String idStore, ReviewCreateDto reviewCreate)
+        createReview,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String id)? started,
+    TResult? Function(String idStore)? started,
+    TResult? Function(String idStore, ReviewCreateDto reviewCreate)?
+        createReview,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String id)? started,
+    TResult Function(String idStore)? started,
+    TResult Function(String idStore, ReviewCreateDto reviewCreate)?
+        createReview,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
+    required TResult Function(_CreateReview value) createReview,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
+    TResult? Function(_CreateReview value)? createReview,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
+    TResult Function(_CreateReview value)? createReview,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -61,7 +70,7 @@ abstract class $StoreDetailEventCopyWith<$Res> {
           StoreDetailEvent value, $Res Function(StoreDetailEvent) then) =
       _$StoreDetailEventCopyWithImpl<$Res, StoreDetailEvent>;
   @useResult
-  $Res call({String id});
+  $Res call({String idStore});
 }
 
 /// @nodoc
@@ -77,12 +86,12 @@ class _$StoreDetailEventCopyWithImpl<$Res, $Val extends StoreDetailEvent>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
+    Object? idStore = null,
   }) {
     return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      idStore: null == idStore
+          ? _value.idStore
+          : idStore // ignore: cast_nullable_to_non_nullable
               as String,
     ) as $Val);
   }
@@ -96,7 +105,7 @@ abstract class _$$StartedImplCopyWith<$Res>
       __$$StartedImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String id});
+  $Res call({String idStore});
 }
 
 /// @nodoc
@@ -110,12 +119,12 @@ class __$$StartedImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
+    Object? idStore = null,
   }) {
     return _then(_$StartedImpl(
-      null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      null == idStore
+          ? _value.idStore
+          : idStore // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -124,14 +133,14 @@ class __$$StartedImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$StartedImpl implements _Started {
-  const _$StartedImpl(this.id);
+  const _$StartedImpl(this.idStore);
 
   @override
-  final String id;
+  final String idStore;
 
   @override
   String toString() {
-    return 'StoreDetailEvent.started(id: $id)';
+    return 'StoreDetailEvent.started(idStore: $idStore)';
   }
 
   @override
@@ -139,11 +148,11 @@ class _$StartedImpl implements _Started {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$StartedImpl &&
-            (identical(other.id, id) || other.id == id));
+            (identical(other.idStore, idStore) || other.idStore == idStore));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, id);
+  int get hashCode => Object.hash(runtimeType, idStore);
 
   @JsonKey(ignore: true)
   @override
@@ -154,27 +163,33 @@ class _$StartedImpl implements _Started {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String id) started,
+    required TResult Function(String idStore) started,
+    required TResult Function(String idStore, ReviewCreateDto reviewCreate)
+        createReview,
   }) {
-    return started(id);
+    return started(idStore);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String id)? started,
+    TResult? Function(String idStore)? started,
+    TResult? Function(String idStore, ReviewCreateDto reviewCreate)?
+        createReview,
   }) {
-    return started?.call(id);
+    return started?.call(idStore);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String id)? started,
+    TResult Function(String idStore)? started,
+    TResult Function(String idStore, ReviewCreateDto reviewCreate)?
+        createReview,
     required TResult orElse(),
   }) {
     if (started != null) {
-      return started(id);
+      return started(idStore);
     }
     return orElse();
   }
@@ -183,6 +198,7 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
+    required TResult Function(_CreateReview value) createReview,
   }) {
     return started(this);
   }
@@ -191,6 +207,7 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
+    TResult? Function(_CreateReview value)? createReview,
   }) {
     return started?.call(this);
   }
@@ -199,6 +216,7 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
+    TResult Function(_CreateReview value)? createReview,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -209,10 +227,10 @@ class _$StartedImpl implements _Started {
 }
 
 abstract class _Started implements StoreDetailEvent {
-  const factory _Started(final String id) = _$StartedImpl;
+  const factory _Started(final String idStore) = _$StartedImpl;
 
   @override
-  String get id;
+  String get idStore;
   @override
   @JsonKey(ignore: true)
   _$$StartedImplCopyWith<_$StartedImpl> get copyWith =>
@@ -220,44 +238,174 @@ abstract class _Started implements StoreDetailEvent {
 }
 
 /// @nodoc
-mixin _$StoreDetailState {
+abstract class _$$CreateReviewImplCopyWith<$Res>
+    implements $StoreDetailEventCopyWith<$Res> {
+  factory _$$CreateReviewImplCopyWith(
+          _$CreateReviewImpl value, $Res Function(_$CreateReviewImpl) then) =
+      __$$CreateReviewImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String idStore, ReviewCreateDto reviewCreate});
+
+  $ReviewCreateDtoCopyWith<$Res> get reviewCreate;
+}
+
+/// @nodoc
+class __$$CreateReviewImplCopyWithImpl<$Res>
+    extends _$StoreDetailEventCopyWithImpl<$Res, _$CreateReviewImpl>
+    implements _$$CreateReviewImplCopyWith<$Res> {
+  __$$CreateReviewImplCopyWithImpl(
+      _$CreateReviewImpl _value, $Res Function(_$CreateReviewImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? idStore = null,
+    Object? reviewCreate = null,
+  }) {
+    return _then(_$CreateReviewImpl(
+      idStore: null == idStore
+          ? _value.idStore
+          : idStore // ignore: cast_nullable_to_non_nullable
+              as String,
+      reviewCreate: null == reviewCreate
+          ? _value.reviewCreate
+          : reviewCreate // ignore: cast_nullable_to_non_nullable
+              as ReviewCreateDto,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ReviewCreateDtoCopyWith<$Res> get reviewCreate {
+    return $ReviewCreateDtoCopyWith<$Res>(_value.reviewCreate, (value) {
+      return _then(_value.copyWith(reviewCreate: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$CreateReviewImpl implements _CreateReview {
+  const _$CreateReviewImpl({required this.idStore, required this.reviewCreate});
+
+  @override
+  final String idStore;
+  @override
+  final ReviewCreateDto reviewCreate;
+
+  @override
+  String toString() {
+    return 'StoreDetailEvent.createReview(idStore: $idStore, reviewCreate: $reviewCreate)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CreateReviewImpl &&
+            (identical(other.idStore, idStore) || other.idStore == idStore) &&
+            (identical(other.reviewCreate, reviewCreate) ||
+                other.reviewCreate == reviewCreate));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, idStore, reviewCreate);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$CreateReviewImplCopyWith<_$CreateReviewImpl> get copyWith =>
+      __$$CreateReviewImplCopyWithImpl<_$CreateReviewImpl>(this, _$identity);
+
+  @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function(List<StoreReviewDto> reviewModel) success,
-  }) =>
-      throw _privateConstructorUsedError;
+    required TResult Function(String idStore) started,
+    required TResult Function(String idStore, ReviewCreateDto reviewCreate)
+        createReview,
+  }) {
+    return createReview(idStore, reviewCreate);
+  }
+
+  @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function(List<StoreReviewDto> reviewModel)? success,
-  }) =>
-      throw _privateConstructorUsedError;
+    TResult? Function(String idStore)? started,
+    TResult? Function(String idStore, ReviewCreateDto reviewCreate)?
+        createReview,
+  }) {
+    return createReview?.call(idStore, reviewCreate);
+  }
+
+  @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(List<StoreReviewDto> reviewModel)? success,
+    TResult Function(String idStore)? started,
+    TResult Function(String idStore, ReviewCreateDto reviewCreate)?
+        createReview,
     required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
+  }) {
+    if (createReview != null) {
+      return createReview(idStore, reviewCreate);
+    }
+    return orElse();
+  }
+
+  @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Success value) success,
-  }) =>
-      throw _privateConstructorUsedError;
+    required TResult Function(_Started value) started,
+    required TResult Function(_CreateReview value) createReview,
+  }) {
+    return createReview(this);
+  }
+
+  @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Success value)? success,
-  }) =>
-      throw _privateConstructorUsedError;
+    TResult? Function(_Started value)? started,
+    TResult? Function(_CreateReview value)? createReview,
+  }) {
+    return createReview?.call(this);
+  }
+
+  @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Success value)? success,
+    TResult Function(_Started value)? started,
+    TResult Function(_CreateReview value)? createReview,
     required TResult orElse(),
-  }) =>
+  }) {
+    if (createReview != null) {
+      return createReview(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _CreateReview implements StoreDetailEvent {
+  const factory _CreateReview(
+      {required final String idStore,
+      required final ReviewCreateDto reviewCreate}) = _$CreateReviewImpl;
+
+  @override
+  String get idStore;
+  ReviewCreateDto get reviewCreate;
+  @override
+  @JsonKey(ignore: true)
+  _$$CreateReviewImplCopyWith<_$CreateReviewImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+mixin _$StoreDetailState {
+  Map<String, List<StoreReviewDto>> get reviews =>
+      throw _privateConstructorUsedError;
+
+  @JsonKey(ignore: true)
+  $StoreDetailStateCopyWith<StoreDetailState> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -266,6 +414,8 @@ abstract class $StoreDetailStateCopyWith<$Res> {
   factory $StoreDetailStateCopyWith(
           StoreDetailState value, $Res Function(StoreDetailState) then) =
       _$StoreDetailStateCopyWithImpl<$Res, StoreDetailState>;
+  @useResult
+  $Res call({Map<String, List<StoreReviewDto>> reviews});
 }
 
 /// @nodoc
@@ -277,248 +427,103 @@ class _$StoreDetailStateCopyWithImpl<$Res, $Val extends StoreDetailState>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? reviews = null,
+  }) {
+    return _then(_value.copyWith(
+      reviews: null == reviews
+          ? _value.reviews
+          : reviews // ignore: cast_nullable_to_non_nullable
+              as Map<String, List<StoreReviewDto>>,
+    ) as $Val);
+  }
 }
 
 /// @nodoc
-abstract class _$$InitialImplCopyWith<$Res> {
-  factory _$$InitialImplCopyWith(
-          _$InitialImpl value, $Res Function(_$InitialImpl) then) =
-      __$$InitialImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$InitialImplCopyWithImpl<$Res>
-    extends _$StoreDetailStateCopyWithImpl<$Res, _$InitialImpl>
-    implements _$$InitialImplCopyWith<$Res> {
-  __$$InitialImplCopyWithImpl(
-      _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$InitialImpl implements _Initial {
-  const _$InitialImpl();
-
+abstract class _$$StoreDetailStateImplCopyWith<$Res>
+    implements $StoreDetailStateCopyWith<$Res> {
+  factory _$$StoreDetailStateImplCopyWith(_$StoreDetailStateImpl value,
+          $Res Function(_$StoreDetailStateImpl) then) =
+      __$$StoreDetailStateImplCopyWithImpl<$Res>;
   @override
-  String toString() {
-    return 'StoreDetailState.initial()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$InitialImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function(List<StoreReviewDto> reviewModel) success,
-  }) {
-    return initial();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function(List<StoreReviewDto> reviewModel)? success,
-  }) {
-    return initial?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(List<StoreReviewDto> reviewModel)? success,
-    required TResult orElse(),
-  }) {
-    if (initial != null) {
-      return initial();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Success value) success,
-  }) {
-    return initial(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Success value)? success,
-  }) {
-    return initial?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Success value)? success,
-    required TResult orElse(),
-  }) {
-    if (initial != null) {
-      return initial(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _Initial implements StoreDetailState {
-  const factory _Initial() = _$InitialImpl;
-}
-
-/// @nodoc
-abstract class _$$SuccessImplCopyWith<$Res> {
-  factory _$$SuccessImplCopyWith(
-          _$SuccessImpl value, $Res Function(_$SuccessImpl) then) =
-      __$$SuccessImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({List<StoreReviewDto> reviewModel});
+  $Res call({Map<String, List<StoreReviewDto>> reviews});
 }
 
 /// @nodoc
-class __$$SuccessImplCopyWithImpl<$Res>
-    extends _$StoreDetailStateCopyWithImpl<$Res, _$SuccessImpl>
-    implements _$$SuccessImplCopyWith<$Res> {
-  __$$SuccessImplCopyWithImpl(
-      _$SuccessImpl _value, $Res Function(_$SuccessImpl) _then)
+class __$$StoreDetailStateImplCopyWithImpl<$Res>
+    extends _$StoreDetailStateCopyWithImpl<$Res, _$StoreDetailStateImpl>
+    implements _$$StoreDetailStateImplCopyWith<$Res> {
+  __$$StoreDetailStateImplCopyWithImpl(_$StoreDetailStateImpl _value,
+      $Res Function(_$StoreDetailStateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? reviewModel = null,
+    Object? reviews = null,
   }) {
-    return _then(_$SuccessImpl(
-      null == reviewModel
-          ? _value._reviewModel
-          : reviewModel // ignore: cast_nullable_to_non_nullable
-              as List<StoreReviewDto>,
+    return _then(_$StoreDetailStateImpl(
+      null == reviews
+          ? _value._reviews
+          : reviews // ignore: cast_nullable_to_non_nullable
+              as Map<String, List<StoreReviewDto>>,
     ));
   }
 }
 
 /// @nodoc
 
-class _$SuccessImpl implements _Success {
-  const _$SuccessImpl(final List<StoreReviewDto> reviewModel)
-      : _reviewModel = reviewModel;
+class _$StoreDetailStateImpl extends _StoreDetailState {
+  const _$StoreDetailStateImpl(final Map<String, List<StoreReviewDto>> reviews)
+      : _reviews = reviews,
+        super._();
 
-  final List<StoreReviewDto> _reviewModel;
+  final Map<String, List<StoreReviewDto>> _reviews;
   @override
-  List<StoreReviewDto> get reviewModel {
-    if (_reviewModel is EqualUnmodifiableListView) return _reviewModel;
+  Map<String, List<StoreReviewDto>> get reviews {
+    if (_reviews is EqualUnmodifiableMapView) return _reviews;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_reviewModel);
+    return EqualUnmodifiableMapView(_reviews);
   }
 
   @override
   String toString() {
-    return 'StoreDetailState.success(reviewModel: $reviewModel)';
+    return 'StoreDetailState(reviews: $reviews)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$SuccessImpl &&
-            const DeepCollectionEquality()
-                .equals(other._reviewModel, _reviewModel));
+            other is _$StoreDetailStateImpl &&
+            const DeepCollectionEquality().equals(other._reviews, _reviews));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(_reviewModel));
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_reviews));
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith =>
-      __$$SuccessImplCopyWithImpl<_$SuccessImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function(List<StoreReviewDto> reviewModel) success,
-  }) {
-    return success(reviewModel);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function(List<StoreReviewDto> reviewModel)? success,
-  }) {
-    return success?.call(reviewModel);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(List<StoreReviewDto> reviewModel)? success,
-    required TResult orElse(),
-  }) {
-    if (success != null) {
-      return success(reviewModel);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Success value) success,
-  }) {
-    return success(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Success value)? success,
-  }) {
-    return success?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Success value)? success,
-    required TResult orElse(),
-  }) {
-    if (success != null) {
-      return success(this);
-    }
-    return orElse();
-  }
+  _$$StoreDetailStateImplCopyWith<_$StoreDetailStateImpl> get copyWith =>
+      __$$StoreDetailStateImplCopyWithImpl<_$StoreDetailStateImpl>(
+          this, _$identity);
 }
 
-abstract class _Success implements StoreDetailState {
-  const factory _Success(final List<StoreReviewDto> reviewModel) =
-      _$SuccessImpl;
+abstract class _StoreDetailState extends StoreDetailState {
+  const factory _StoreDetailState(
+      final Map<String, List<StoreReviewDto>> reviews) = _$StoreDetailStateImpl;
+  const _StoreDetailState._() : super._();
 
-  List<StoreReviewDto> get reviewModel;
+  @override
+  Map<String, List<StoreReviewDto>> get reviews;
+  @override
   @JsonKey(ignore: true)
-  _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith =>
+  _$$StoreDetailStateImplCopyWith<_$StoreDetailStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

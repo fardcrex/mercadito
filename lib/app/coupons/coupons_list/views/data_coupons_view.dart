@@ -32,9 +32,9 @@ class DataCouponsView extends StatelessWidget {
                 final coupon = CouponModel(
                   discount: dto.discount,
                   id: dto.id,
-                  code: dto.code,
-                  name: dto.name,
-                  urlQr: dto.urlQr,
+                  code: dto.name,
+                  name: dto.description,
+                  urlQr: dto.media,
                 );
                 return GestureDetector(
                   child: CouponCard(couponModel: coupon),

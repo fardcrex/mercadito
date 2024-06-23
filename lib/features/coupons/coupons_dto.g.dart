@@ -8,18 +8,18 @@ part of 'coupons_dto.dart';
 
 _$CouponDtoImpl _$$CouponDtoImplFromJson(Map<String, dynamic> json) =>
     _$CouponDtoImpl(
-      id: json['id'] as String,
-      code: json['code'] as String,
+      id: json['id'] as String? ?? '',
       name: json['name'] as String,
-      discount: (json['discount'] as num).toDouble(),
-      urlQr: json['urlQr'] as String,
+      description: json['description'] as String,
+      discount: (json['discount'] as num?)?.toDouble() ?? 0.25,
+      media: json['media'] as String,
     );
 
 Map<String, dynamic> _$$CouponDtoImplToJson(_$CouponDtoImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
-      'code': instance.code,
       'name': instance.name,
+      'description': instance.description,
       'discount': instance.discount,
-      'urlQr': instance.urlQr,
+      'media': instance.media,
     };

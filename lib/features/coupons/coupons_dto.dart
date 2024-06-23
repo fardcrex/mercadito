@@ -5,11 +5,11 @@ part 'coupons_dto.g.dart';
 @freezed
 class CouponDto with _$CouponDto {
   const factory CouponDto({
-    required String id,
-    required String code,
+    @Default('') String id,
     required String name,
-    required double discount,
-    required String urlQr,
+    required String description,
+    @Default(0.25) double discount,
+    required String media,
   }) = _CouponDto;
 
   factory CouponDto.fromJson(Map<String, dynamic> json) =>

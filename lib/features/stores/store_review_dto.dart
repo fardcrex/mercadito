@@ -20,10 +20,13 @@ class StoreReviewDto with _$StoreReviewDto {
 class ReviewCreateDto with _$ReviewCreateDto {
   const factory ReviewCreateDto({
     required String comments,
-    required double productQualityStars,
-    required double customerAttentionStars,
-    required double waitingTimeStars,
-    required double averageStars,
+    required String fullName,
+    required int storeId,
+    required int userId,
+    required int productQualityStars,
+    required int customerAttentionStars,
+    required int waitingTimeStars,
+    required int averageStars,
   }) = _ReviewCreateDto;
 
   factory ReviewCreateDto.fromJson(Map<String, dynamic> json) =>
